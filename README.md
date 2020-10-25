@@ -1,24 +1,7 @@
 # todo_management
 
-## Project setup
-```
-yarn install
-```
+### Description
 
-### Compiles and hot-reloads for development
 ```
-yarn serve
+An application to manage projects and state changes
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

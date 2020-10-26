@@ -1,15 +1,24 @@
 <template>
-    <div class="todo">{{title}}</div>
 
+    <div class="todo">
+        {{title}}
+        <i @click="deleteTodo(id)" class="mdi mdi-delete"></i>
+    </div>
 </template>
 
 <script>
 
-
+import { mapActions} from 'vuex'
 export default {
      props: {
-    title: String
-  },
+           id: Number ,
+        title: String,
+    },
+
+    methods:{
+        ...mapActions(['deleteTodo']),
+
+    }
 }
 </script>
 
@@ -23,5 +32,22 @@ export default {
         position: relative;
         cursor: pointer;
     }
+
+    i{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .is-complete{
+        background: #35495e;
+        color: #fff;
+    }
+
+
+
+    
     
 </style> 
